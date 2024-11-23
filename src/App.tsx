@@ -4,8 +4,10 @@ import logo from "./assets/images/kasalogo.png" ;
 import { About } from "./pages/about/About";
 import "./App.scss"
 import kasafoot from "./assets/images/kasafoot.png";
-import { Gallery } from "./pages/about/gallery/Gallery";
-import { Error } from "./pages/about/Error/Error";
+import { Gallery } from "./pages/gallery/Gallery";
+import { Error } from "./pages/Error/Error";
+import { CardsPage } from "./pages/CardsPage/CardsPage";
+
 
 export const App:React.FC = ()=> {
 
@@ -28,6 +30,7 @@ export const App:React.FC = ()=> {
       <Route path="/" element = {<Gallery />} />
       <Route path="/error" element = {<Error />} />
       <Route path="*" element = {<Error />} />
+      <Route path="card/:id" element = {<CardsPage />} />
     </Routes>
   </Router>
   <footer>
