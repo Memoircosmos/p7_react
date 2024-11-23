@@ -1,0 +1,304 @@
+.CardsPage {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+  
+    .imgDiv {
+      position: relative;
+      overflow: hidden;
+      border-radius: 25px;
+      width: 90%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 415px;
+  
+  
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+  
+      .active {
+        display: flex;
+      }
+  
+      .disabled {
+        display: none;
+      }
+  
+      .left-right-div {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+  
+        span {
+          color: white;
+          font-size: 4.5vw;
+          margin: 2%;
+          cursor: pointer;
+        }
+      }
+  
+      p {
+        position: absolute;
+        color: white;
+        bottom: 1%;
+      }
+    }
+  
+    .info {
+      width: 90%;
+      margin-top: 3%;
+      margin-bottom: 1%;
+  
+      .sec12 {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+  
+        .info-section1 {
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+          justify-content: center;
+  
+          .title-and-loc {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+  
+            h2 {
+              color: #FF6060;
+              font-size: 2.25rem;
+              margin: 0;
+              padding: 0;
+            }
+  
+            p {
+              margin: 0;
+              padding: 0;
+              margin-top: 1%;
+              font-size: 1.13rem;
+              font-weight: 500;
+            }
+          }
+  
+          .tags {
+            width: auto;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-top: 5%;
+            gap: 10px;
+  
+            p {
+              background-color: #FF6060;
+              color: white;
+              margin: 0;
+              padding: 2px 2vw;
+              font-size: 1rem;
+              font-weight: 700;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 10px;
+              white-space: nowrap;
+            }
+          }
+        }
+  
+        .info-section2 {
+          width: 20%;
+          display: flex;
+          align-items: flex-end;
+          flex-direction: column;
+          justify-content: flex-end;
+  
+  
+          .account-info {
+            height: auto;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: flex-end;
+  
+            p {
+              color: #FF6060;
+              margin-right: 5%;
+              font-size: 1.125rem;
+              text-align: right;
+              width: auto;
+              white-space: nowrap;
+            }
+  
+            img {
+              height: 7vh;
+              border-radius: 50%;
+            }
+          }
+  
+          .stars-rating {
+  
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 13%;
+            font-size: 1.5rem;
+            gap: 10px;
+  
+            i {
+              margin: 0;
+              padding: 0;
+  
+            }
+  
+            .active-star {
+              color: #FF6060;
+            }
+  
+            .disabled-star {
+              color: #E3E3E3;
+            }
+          }
+        }
+      }
+  
+      .info-section3 {
+        $duration-time: 1s;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+  
+        .serie {
+          width: 45%;
+        }
+      }
+    }
+  }
+  
+  
+  
+  /****** MOBILE ******/
+  @media (max-width: 768px) {
+    .CardsPage {
+  
+      .imgDiv {
+        border-radius: 10px;
+        height: 255px;
+  
+        .left-right-div {
+          span {
+            font-size: 7vw;
+          }
+        }
+  
+        p {
+          display: none;
+        }
+      }
+  
+      .info {
+        width: 90%;
+  
+        .sec12 {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+  
+          .info-section1 {
+            width: 100%;
+  
+            .title-and-loc {
+              h2 {
+                font-size: 5vw;
+              }
+  
+              p {
+                font-size: 3vw;
+              }
+            }
+  
+            .tags {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: flex-start;
+  
+              p {
+                font-size: 0.655rem;
+                margin-bottom: 15px;
+                border-radius: 5px;
+                padding: 2px 3vw;
+              }
+            }
+          }
+  
+          .info-section2 {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+  
+            .account-info {
+              width: 37%;
+  
+              img {
+                height: 3.801vh;
+              }
+  
+              p {
+                font-size: 3vw;
+                line-height: 2vh;
+              }
+            }
+  
+            .stars-rating {
+  
+              padding-top: initial;
+  
+              i {
+                font-size: 3vw;
+              }
+            }
+          }
+        }
+  
+        .info-section3 {
+          display: flex;
+          flex-direction: column;
+  
+          .serie {
+            margin-bottom: 4%;
+            width: 100%;
+            height: auto;
+  
+            h3 {
+              font-size: 3vw;
+  
+              i {
+                font-size: 5vw;
+                margin-right: 2%;
+              }
+            }
+  
+            p {
+              font-size: 3vw;
+            }
+          }
+        }
+      }
+    }
+  }
