@@ -1,6 +1,6 @@
 import React from "react"
 import cardsData from "../../data/logement.json";
-import { Navigate, useParams } from "react-router-dom";
+import {useParams } from "react-router-dom";
 import { CardImage } from "../gallery/Gallery";
 import { Carousel } from "../../components/Carousel/Carousel";
 import { Collapse } from "../../components/collapse/Collapse";
@@ -11,7 +11,7 @@ export const CardsPage : React.FC = () => {
     const {id} = useParams()
     const dataGroup = cardsData.find((dt:CardImage) => dt.id === id)
     
-    if(!dataGroup) return <Navigate to="/error" /> 
+    if(!dataGroup) return <p>Le logement avec cette id n'existe pas.</p> 
     return (
         <div className="CardsPage">
             <Carousel id={id} />

@@ -81,7 +81,7 @@
 
 /****** MOBILE ******/
 @media (max-width: 768px) {
-    .gallery {
+    .Gallery {
         width: 100%;
 
         .mainBanner {
@@ -99,6 +99,8 @@
         }
 
         .cards-container {
+            display: flex;
+            flex-direction: column;
             background-color: transparent;
             width: 90%;
             padding: 0;
